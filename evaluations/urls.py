@@ -1,5 +1,7 @@
-from django.urls import path, include
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('', ...)#definir a home
+    path('',views.pagFormulario, name="formulario" ),
+    path('sucesso/<int:pk>',views.sucesso, name='sucesso')
 ]

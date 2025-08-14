@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+    <link rel="stylesheet" href="{% static 'conama/style/estilo_formulario.css' %}">
+</head>
+<body>
+    <h1>AVALIAÇÃO CONAMA</h1>
+    <br>
+    <br>
+    <form action= "{% url 'formulario' %}" method="POST"> {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Save">
+    </form>
+
+</body>
+</html>
